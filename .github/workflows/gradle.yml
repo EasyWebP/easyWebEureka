@@ -57,7 +57,8 @@ jobs:
         with:
           host: ${{ secrets.HOST }}
           username: root
-          key: ${{ secrets.PEM_KEY }}
+          password: ${{ secrets.PASSWORD }}
+#          key: ${{ secrets.PEM_KEY }}
           port: 3000
           script: |
             sudo docker rm -f $(docker ps -qa)
