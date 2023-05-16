@@ -56,9 +56,9 @@ jobs:
         uses: appleboy/ssh-action@v0.1.7
         with:
           host: ${{ secrets.HOST }}
-          username: ubuntu
+          username: root
           key: ${{ secrets.PEM_KEY }}
-          port: 22
+          port: 3000
           script: |
             sudo docker rm -f $(docker ps -qa)
             sudo docker pull ${{ secrets.DOCKER_REPO }}/msa_eureka
